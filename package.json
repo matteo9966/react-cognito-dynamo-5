@@ -2,7 +2,8 @@
   "name": "react-cognito-dynamo-5",
   "version": "0.1.0",
   "scripts": {
-    "build": "tsc",
+    "build:frontend": "npm run build --prefix frontend",
+    "deploy": "npm run build:frontend && cdk deploy",
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk"

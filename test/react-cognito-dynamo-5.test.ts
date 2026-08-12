@@ -1,17 +1,19 @@
-// import * as cdk from 'aws-cdk-lib/core';
+// import * as cdk from 'aws-cdk-lib';
 // import { Template } from 'aws-cdk-lib/assertions';
-// import * as ReactCognitoDynamo5 from '../lib/react-cognito-dynamo-5-stack';
+// import { ReactCognitoDynamo5Stack } from '../lib/react-cognito-dynamo-5-stack';
 
-// example test. To run these tests, uncomment this file along with the
-// example resource in lib/react-cognito-dynamo-5-stack.ts
-test('SQS Queue Created', () => {
+// test('frontend static website bucket and distribution are created', () => {
 //   const app = new cdk.App();
-//     // WHEN
-//   const stack = new ReactCognitoDynamo5.ReactCognitoDynamo5Stack(app, 'MyTestStack');
-//     // THEN
+
+//   const stack = new ReactCognitoDynamo5Stack(app, 'MyTestStack');
 //   const template = Template.fromStack(stack);
 
-//   template.hasResourceProperties('AWS::SQS::Queue', {
-//     VisibilityTimeout: 300
+//   template.hasResourceProperties('AWS::S3::Bucket', {
+//     WebsiteConfiguration: {
+//       IndexDocument: 'index.html',
+//       ErrorDocument: 'index.html',
+//     },
 //   });
-});
+
+//   template.resourceCountIs('AWS::CloudFront::Distribution', 1);
+// });
